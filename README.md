@@ -1,6 +1,6 @@
 Task2:-
 1) I Have been Perform Insertion, Updation and Deletion Through This Task
-2) First I Have Inserted All data into Perticualar Table by Using INSERT Query
+2) First I Have Inserted All data into Perticular Table by Using INSERT Query
 3) also perform Normalization Concept to reduce data redudency by using data distribution into multiple tabled
    and define relationship between them
 4) after Insertion all data I have displayed all Tables through SELECT Query

@@ -1,0 +1,58 @@
+use library_database;
+
+-- First Insert Values Into Authors
+INSERT INTO AUTHORS VALUES(1001,"Harper Lee",1926),
+(1002,"Jane Austen",1775),
+(1003,"F.Scott Fitzgerald",1896),
+(1004,"J.D.Salinger",1919),
+(1005,"J.K.Rowling",1965),
+(1006,"J.R.R.Tolkien",1892);
+select * from Authors;
+
+-- Insert values Into Members
+
+INSERT INTO MEMBERS VALUES(101,"VAIBHAV SATRAS","VAIBHAVSATRAS5@GMAIL.COM","9765592502","2022-07-25","ACTIVE"),
+(102,"MANOHAR JOSHI","MANOHARJOSHI@GMAIL.COM","9765489458","2020-08-22","NOT ACTIVE"),
+(103,"MINAL KUMARI","MINALKUMARI@GMAIL.COM","9146714725","2018-03-10","ACTIVE"),
+(104,"AMOL KALE","AMOLKALE5@GMAIL.COM","9730102217","2020-11-12","ACTIVE"),
+(105,"MANISHA BHAGAT","MANISHABHAGAT@GMAIL.COM","9765592502","2019-01-10","NOT ACTICE");
+
+SELECT * FROM MEMBERS;
+
+-- Insert values into publisher
+
+INSERT INTO PUBLISHER VALUES(201,"J.B.Lippincott & Co.","USA"),
+(202,"T.Egerton,Whitehall","LONDON"),
+(203,"Charles Scribner’s Sons","USA"),
+(204,"Little,Brown and Company","USA"),
+(205,"Bloomsbury Publishing","UK");
+
+SELECT * FROM PUBLISHER;
+
+-- Insert Values Into Books
+INSERT INTO BOOKS VALUES(001,"To Kill a Mockingbird",1001,201,"Fiction",25,10),
+(002,"Pride and Prejudice",1002,202,"Dystopian",20,15),
+(003,"The Great Gatsby",1003,203,"Romance",10,8),
+(004,"The Catcher in the Rye",1004,204,"Fiction",15,12),
+(005,"The Catcher in the Rye",1005,205,"Coming-of-Age",12,10);
+
+SELECT * FROM BOOKS;
+
+-- Insert Values Into Book_Issued
+
+insert into book_issued values(5001,001,101,"2025-07-24","2025-08-24","2025-07-30"),
+(5002,001,102,"2020-08-23","2020-09-25","2020-09-02"),
+(5003,002,102,"2020-08-23","2020-09-25","2020-09-02"),
+(5004,003,103,"2018-03-12","2018-04-10","2018-04-10");
+
+select * from BOOK_ISSUED;
+
+-- DATA UPDATION
+UPDATE MEMBERS SET STATUS = "ACTIVE" WHERE MEMBER_ID = 102;
+UPDATE BOOKS SET TOTAL_COPIES = 1 OR AVAILABLE_COPIES = 12 WHERE BOOK_ID = 001;
+
+
+-- DATA DELETION
+DELETE FROM BOOK_ISSUED WHERE ISSUE_ID = 5002;
+
+DELETE FROM BOOKS WHERE BOOK_ID = 4 AND PUBLISHER_ID = 204;
